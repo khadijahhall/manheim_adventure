@@ -1,12 +1,13 @@
 <div class="jumbotron">
-  <%= form_for @changeset, page_path(@conn, :create), fn f -> %>
-<div class="form-group">
-  <%=text_input f, :text, placeholder: "Clue", class: "form-control" %>
-  <%= error_tag f, :text %>
-</div>
-
-
-<%= submit "Give Clue", class: "btn btn-primary" %>
-
-<% end%>
+  <h2><%= @clue  %></h2>
+  <p class="lead valign-wrapper">Help Jabari by giving clues to get through the gates and into the castle.
+    <br/> Acceptable commands start with:<br/>Jump…<br/>Dig…<br/>Climb…<br/>Run…
+  </p>
+  <%= form_for @changeset, page_path(@conn, :give_answer), fn f -> %>
+    <div class="form-group">
+      <%=text_input f, :text, placeholder: "Clue", class: "form-control" %>
+      <%= error_tag f, :text %>
+    </div>
+    <%= submit "Give Clue", class: "btn btn-primary" %>
+  <% end%>
 </div>

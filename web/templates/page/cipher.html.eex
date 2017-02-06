@@ -1,0 +1,22 @@
+<div class="jumbotron">
+  <h4>
+    Enter your secret note<br/>
+    and the number of letters you want to shift<br/>
+    to form your Casear Cipher!
+  </h4>
+  <h4><%= @error %></h4>
+
+  <%= form_for @changeset, page_path(@conn, :encrypt), fn f -> %>
+    <div class="form-group">
+      <%= text_input f, :text, placeholder: "Text", class: "form-control" %>
+      <%= error_tag f, :text %>
+    </div>
+    <div class="form-group">
+      <%= text_input f, :shift, placeholder: "Shift Number", class: "form-control" %>
+      <%= error_tag f, :shift %>
+    </div>
+
+    <%= submit "Encrypt!", class: "btn btn-primary" %>
+
+  <% end%>
+</div>

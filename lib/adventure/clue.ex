@@ -7,13 +7,15 @@ defmodule Adventure.Clue do
 
     cond do
       String.starts_with?(clue_command, "jump") == true ->
-      IO.puts "Oh no! You didn’t jump high enough! Try something else!"
+       "Oh no! You didn’t jump high enough! Try something else!"
       String.starts_with?(clue_command, "dig") == true ->
-      IO.puts "Oh no! You didn’t dig deep enough! Try something else!"
+     "Oh no! You didn’t dig deep enough! Try something else!"
       String.starts_with?(clue_command, "run") == true ->
-      IO.puts "Oh no! You didn’t run fast enough! Try something else!"
+     "Oh no! You didn’t run fast enough! Try something else!"
       String.starts_with?(clue_command, "climb") == true ->
-      IO.puts "Hurray!! You made it!"
+       "Hurray!! You made it!"
+        true ->
+       "You have used an incorrect command! Make sure you ask Jabari to either jump, dig, run, or climb!"
 
 
     end

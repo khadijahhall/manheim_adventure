@@ -17,6 +17,13 @@ defmodule Adventure.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/clues", PageController, :clues
+    post "/give_answer", PageController, :give_answer
+    get "/continue", PageController, :continue
+    get "/cipher", PageController, :cipher
+    post "/encrypt", PageController, :encrypt
+    # get "/finish", PageController, :finish
+
   end
 
   # Other scopes may use custom stacks.

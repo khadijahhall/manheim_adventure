@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}", name: "Jabari's Adventure" %></h2>
+  <h2>Welcome to Jabari's Adventure</h2>
   <p class="lead">Help Jabari rescue his two little brothers<br />from the Evil Wizard's castle.</p>
+  <%= link "Begin Adventure!", to: page_path(@conn, :clues), class: "btn btn-primary" %>
 </div>
-<%= submit "Begin Adventure!",  to: page_path(@conn, :clues), class: "btn btn-primary" %>

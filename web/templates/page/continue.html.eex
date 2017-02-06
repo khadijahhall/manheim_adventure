@@ -1,0 +1,7 @@
+<div class="jumbotron">
+  <h2><%= @clue %></h2>
+  <p class="lead">A wise owl tells you that Jabari’s brothers are in a chamber with a secret door on the floor in front of the window. The only thing they have to do is knock on the door 3 times and a rescue elf with open the door to the underground escape tunnel.
+  <br />Jabari has to send an encrypted note via the owl to his brothers using the caesar cipher in order to tell them how to access the underground escape tunnel. Be careful!
+  </p>
+  <%= link "Encrypt your secret note!", to: page_path(@conn, :cipher), class: "btn btn-primary" %>
+</div>

@@ -1,0 +1,6 @@
+<div class="jumbotron">
+  <h2>Encrypted: <%= @encryption %></h2>
+  <h2>Original: <%= @original %></h2>
+  <p class="lead">Congrats!<br/>Brothers are successfully rescued!</p>
+  <%= link "Start a New Game!", to: page_path(@conn, :index), class: "btn btn-primary" %>
+</div>
